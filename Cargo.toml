@@ -1,0 +1,13 @@
+[package]
+edition = "2018"
+name = "wes"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures-channel = "0.3"
+futures-util = {version = "0.3", default-features = false, features = ["async-await", "sink", "std"]}
+pin-project = "1.0"
+tokio = {version = "1", default-features = false, features = ["io-std", "macros", "net", "rt-multi-thread", "time"]}
+tokio-tungstenite = {version = "0.15", features = ["tokio-rustls"]}
